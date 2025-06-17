@@ -198,3 +198,34 @@ Stores URLs or file paths of property images.
 - A **PropertyImage**:
   - Belongs to a **Property**.
 
+## 🧩 Feature Breakdown
+
+This Airbnb Clone project includes key features designed to simulate a full-scale property rental platform. Each feature plays a crucial role in delivering a smooth user experience and supporting platform operations.
+
+### 1. User Management
+Handles user registration, login, and profile management. Both guests and hosts can manage their accounts, update information, and perform role-specific actions.
+
+### 2. Property Management
+Allows hosts to list, update, and delete rental properties. Hosts can provide property details, upload photos, and manage availability, enabling them to showcase accommodations to potential guests.
+
+### 3. Booking System
+Enables guests to search for properties, check availability, and make reservations. This system handles date selections, guest counts, and reservation status tracking.
+
+### 4. Review and Rating System
+Guests can leave feedback after their stay, providing star ratings and comments. Reviews help maintain trust on the platform and allow users to make informed decisions.
+
+### 5. Payment Integration
+Securely processes payments for bookings through supported payment gateways. This ensures smooth financial transactions between guests and hosts.
+
+### 6. Search and Filtering
+Allows users to search for properties based on location, price range, property type, and other criteria. This improves usability by helping users find listings that match their preferences.
+
+### 7. Host Dashboard
+Provides hosts with a personalized interface to manage listings, view booking requests, and track earnings. This feature improves host engagement and efficiency.
+
+### 8. Notifications
+Sends alerts and updates to users for events like booking confirmations, payment receipts, and review reminders. Helps keep users informed in real-time.
+
+### 9. Admin Panel (Optional)
+Includes a backend interface for site administrators to manage users, properties, and platform settings. Supports moderation and system-wide monitoring.
+
