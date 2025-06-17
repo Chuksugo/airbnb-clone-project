@@ -71,3 +71,130 @@ The Airbnb Clone Project is built using a modern technology stack that ensures s
 - **Docker**: A containerization platform that ensures consistent development, testing, and production environments by packaging the application and its dependencies.
 
 - **CI/CD Pipelines**: Continuous Integration and Continuous Deployment tools automate the process of testing, building, and deploying code changes, ensuring reliability and faster delivery.
+
+
+## 🗃️ Database Design
+
+This Airbnb Clone project uses a relational database to represent the key components of a booking platform. Below are the core entities, their fields, and how they relate to each other.
+
+### 1. Users
+Represents all users on the platform — guests and hosts.
+
+- `id` (Primary Key)
+- `full_name`
+- `email` (Unique)
+- `password_hash`
+- `phone_number`
+- `is_host` (Boolean)
+
+**Relationships**:
+- A user can own multiple properties (if they are a host).
+- A user can make multiple bookings (as a guest).
+- A user can write reviews for properties and hosts.
+
+---
+
+### 2. Properties
+Represents a home or apartment listed by a host.
+
+- `id` (Primary Key)
+- `host_id` (Foreign Key to Users)
+- `title`
+- `description`
+- `address`
+- `city`
+- `state`
+- `country`
+- `price_per_night`
+- `property_type` (e.g., apartment, house)
+- `max_guests`
+- `created_at`
+
+**Relationships**:
+- A property belongs to one host (User).
+- A property can have many bookings.
+- A property can have many reviews.
+- A property can have multiple images.
+
+---
+
+### 3. Bookings
+Represents a reservation made by a guest for a property.
+
+- `id` (Primary Key)
+- `guest_id` (Foreign Key to Users)
+- `property_id` (Foreign Key to Properties)
+- `start_date`
+- `end_date`
+- `guests_count`
+- `total_price`
+- `status` (e.g., pending, confirmed, canceled)
+
+**Relationships**:
+- A booking is made by one guest for one property.
+- A booking has one payment transaction.
+
+---
+
+### 4. Reviews
+Represents feedback left by a guest after their stay.
+
+- `id` (Primary Key)
+- `guest_id` (Foreign Key to Users)
+- `property_id` (Foreign Key to Properties)
+- `rating` (1–5)
+- `comment`
+- `created_at`
+
+**Relationships**:
+- A review belongs to one guest and one property.
+- A property can have many reviews.
+
+---
+
+### 5. Payments
+Handles transactions for bookings.
+
+- `id` (Primary Key)
+- `booking_id` (Foreign Key to Bookings)
+- `amount`
+- `payment_method` (e.g., credit card, PayPal)
+- `payment_date`
+- `status` (e.g., paid, failed)
+
+**Relationships**:
+- A payment belongs to one booking.
+
+---
+
+### 6. PropertyImages
+Stores URLs or file paths of property images.
+
+- `id` (Primary Key)
+- `property_id` (Foreign Key to Properties)
+- `image_url`
+- `is_primary` (Boolean)
+
+**Relationships**:
+- A property can have many images.
+
+---
+
+### 🔗 Entity Relationships Summary
+
+- A **User**:
+  - Can be a **Host** (owns properties) or a **Guest** (makes bookings).
+  - Can write reviews.
+- A **Property**:
+  - Belongs to one **Host**.
+  - Can have many **Bookings**, **Reviews**, and **Images**.
+- A **Booking**:
+  - Is made by a **Guest** for a **Property**.
+  - Has one **Payment**.
+- A **Review**:
+  - Is written by a **Guest** for a **Property**.
+- A **Payment**:
+  - Is tied to one **Booking**.
+- A **PropertyImage**:
+  - Belongs to a **Property**.
+
