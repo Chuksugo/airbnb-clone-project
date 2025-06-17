@@ -229,3 +229,57 @@ Sends alerts and updates to users for events like booking confirmations, payment
 ### 9. Admin Panel (Optional)
 Includes a backend interface for site administrators to manage users, properties, and platform settings. Supports moderation and system-wide monitoring.
 
+## 🔐 API Security
+
+Securing the backend APIs is critical to protecting sensitive user data, preventing unauthorized access, and maintaining trust across the platform. Below are the key security measures that will be implemented in the Airbnb Clone project:
+
+### 1. Authentication
+Authentication verifies the identity of users through secure methods such as JWT (JSON Web Tokens) or session-based tokens. Only authenticated users can access protected endpoints like booking, listing properties, or writing reviews.
+
+**Why It Matters:** Prevents unauthorized users from accessing personal data or performing sensitive actions.
+
+---
+
+### 2. Authorization
+Authorization determines what actions a user is allowed to perform. For example, only hosts should be able to manage their own properties, and only guests should be able to create bookings.
+
+**Why It Matters:** Ensures that users can only interact with resources they own or have permission to access, preventing privilege escalation.
+
+---
+
+### 3. Rate Limiting & Throttling
+Limits the number of API requests a user or IP address can make in a given time frame. Tools like Django REST Framework’s throttling mechanisms will be used.
+
+**Why It Matters:** Protects against brute-force attacks, DoS (Denial of Service), and abuse of API endpoints.
+
+---
+
+### 4. Input Validation & Sanitization
+Validates all incoming data to avoid injection attacks (like SQL injection, XSS) and ensures that only clean, expected inputs are processed by the backend.
+
+**Why It Matters:** Prevents malicious inputs from compromising the integrity or security of the application.
+
+---
+
+### 5. HTTPS/SSL Encryption
+All API traffic will be encrypted using HTTPS to prevent data interception during transmission.
+
+**Why It Matters:** Ensures secure communication between clients and the server, especially for sensitive data like passwords and payment information.
+
+---
+
+### 6. Secure Payment Handling
+Integrate trusted third-party payment gateways (like Stripe or PayPal) to handle payment transactions securely and in compliance with industry standards.
+
+**Why It Matters:** Prevents financial fraud and ensures PCI compliance for handling card data.
+
+---
+
+### 7. Token Expiry and Refresh
+Implement token expiration and refresh mechanisms for session security. Expired tokens will require users to re-authenticate.
+
+**Why It Matters:** Reduces the risk of long-lived sessions being hijacked or reused by unauthorized users.
+
+---
+
+By incorporating these API security measures, the project ensures the confidentiality, integrity, and availability of its systems and data.
