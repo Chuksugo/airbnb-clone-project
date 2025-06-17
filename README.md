@@ -52,3 +52,22 @@ Defines the product vision and priorities. Gathers requirements, maintains the p
 Each team member contributes to the success of the Airbnb Clone Project by collaborating closely and aligning their efforts with the overall goals and technical vision.
 
 ---
+## 🧰 Technology Stack
+
+The Airbnb Clone Project is built using a modern technology stack that ensures scalability, performance, and maintainability.
+
+- **Django**: A high-level Python web framework used for building the RESTful API, handling routing, models, and core backend logic.
+
+- **Django REST Framework (DRF)**: An extension of Django that provides powerful tools and libraries for building and managing RESTful APIs with ease and flexibility.
+
+- **PostgreSQL**: A robust, open-source relational database system used to store and manage structured data such as user information, property listings, and bookings.
+
+- **GraphQL**: A query language that allows clients to request only the data they need, improving efficiency and flexibility in data fetching.
+
+- **Celery**: A distributed task queue used to handle background and asynchronous operations like sending notifications or processing payments.
+
+- **Redis**: An in-memory data store used for caching, task queuing with Celery, and session management to enhance performance.
+
+- **Docker**: A containerization platform that ensures consistent development, testing, and production environments by packaging the application and its dependencies.
+
+- **CI/CD Pipelines**: Continuous Integration and Continuous Deployment tools automate the process of testing, building, and deploying code changes, ensuring reliability and faster delivery.
