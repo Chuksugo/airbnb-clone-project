@@ -283,3 +283,29 @@ Implement token expiration and refresh mechanisms for session security. Expired 
 ---
 
 By incorporating these API security measures, the project ensures the confidentiality, integrity, and availability of its systems and data.
+
+## 🚀 CI/CD Pipeline
+
+CI/CD (Continuous Integration and Continuous Deployment) is a crucial part of modern software development that automates testing, integration, and deployment processes. It ensures that code changes are automatically validated and deployed to the target environment with minimal manual intervention.
+
+### What is CI/CD?
+
+- **Continuous Integration (CI):** Automatically tests and integrates new code into the main branch whenever developers push changes. This helps catch bugs early and maintain code quality.
+- **Continuous Deployment (CD):** Automates the release of validated code to production or staging environments, reducing the risk of manual errors and improving deployment speed.
+
+### Importance for the Airbnb Clone Project
+
+Implementing a CI/CD pipeline:
+- Ensures that every commit is tested, reducing the likelihood of bugs reaching production.
+- Enables quick and reliable deployments of updates and features.
+- Facilitates team collaboration by maintaining a clean and deployable main branch.
+- Saves time by automating repetitive tasks such as testing, migrations, and deployments.
+
+### Tools for CI/CD
+
+- **GitHub Actions:** Automates workflows such as testing, linting, and deployment directly from the GitHub repository.
+- **Docker:** Provides containerization to standardize the development and deployment environments.
+- **Heroku / Render / AWS / DigitalOcean:** Can be used for deploying the application once the pipeline is triggered.
+- **PostgreSQL / MySQL Services:** Used during testing to simulate real database behavior.
+
+By integrating CI/CD pipelines, the Airbnb Clone project ensures rapid, stable, and secure development and deployment processes.
